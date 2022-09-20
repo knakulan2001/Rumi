@@ -1,0 +1,202 @@
+.upload-card {
+    width: 80%;
+    background: #ffffff;
+    box-shadow: 5px 5px 24px 15px rgba(0, 0, 0, 0.04);
+    padding: 30px;
+    margin: 30px;
+}
+.upload-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    align-items: center;
+}
+.form-input-select-create {
+    box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+    border: 2px solid #0000000e;
+    background: #ffffff;
+    margin: 15px 10px 15px 10px;
+    padding: 20px 26px;
+    font-size: 18px;
+    font-family: "Josefin Sans", sans-serif;
+    transition: 0.14s ease;
+    width: 85%;
+    color: #696666;
+}
+
+.form-input-select-create:hover {
+    border: 2px solid #1da699;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.imgPreview {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+}
+.upload-btn {
+    border: 2px solid #1da699;
+    background: #1da699;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 23px;
+    margin: 15px 1px 15px 1px;
+    padding: 15px 10px 19px 10px;
+    width: 250px;
+    box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+    font-family: "Josefin Sans", sans-serif;
+    transition: 0.14s ease;
+}
+.upload-btn:hover {
+    border: 2px solid #28bbac;
+    background: #28bbac;
+}
+.upload-image {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 30px;
+    font-size: 22px;
+    width: 50%;
+}
+
+.upload-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.upload-info-price {
+    display: flex;
+    flex-direction: row;
+}
+.upload-info-pref {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.upload-info-pref > div {
+    margin: 15px;
+}
+
+.upload-info-pref-heading {
+    font-size: 22px;
+    padding-bottom: 12px;
+    color: #696666;
+}
+
+.upload-info-pref-values {
+    font-size: 22px;
+}
+
+.upload-info-pref-values > label {
+    padding-top: 2px !important;
+    margin-left: 10px !important;
+    color: #999595 !important;
+}
+
+#textarea-post {
+    resize: none;
+    width: 75% !important;
+    line-height: 25px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+    padding: 0 30px 10px 30px;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #1da699;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+@media only screen and (max-width: 1400px) {
+    .upload-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin: 30px 0 30px 0;
+        align-items: center;
+    }
+    .upload-info {
+        width: 100%;
+    }
+    .upload-image {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .upload-btn {
+        border: 2px solid #1da699;
+        background: #1da699;
+        color: #ffffff;
+        text-align: center;
+        cursor: pointer;
+        font-size: 21px;
+        margin: 15px 1px 15px 1px;
+        padding: 10px 8px 17px 8px;
+        width: 200px;
+        box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+        font-family: "Josefin Sans", sans-serif;
+        transition: 0.14s ease;
+    }
+}

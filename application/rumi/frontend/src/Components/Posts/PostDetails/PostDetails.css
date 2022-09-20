@@ -1,0 +1,639 @@
+.room-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    position: relative;
+}
+
+.roommate-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.roommate-loading {
+    padding-top: 50px;
+    padding-right: 120px;
+}
+
+.room-detail-container {
+    width: 75vw;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+}
+.room-post-container {
+    grid-area: content;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "photoinfo comments";
+    margin: 0 0px 15px 0px;
+    justify-content: center;
+}
+
+.room-post-card {
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 5px 5px 24px 15px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* width: 100%; */
+}
+.room-post-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    position: relative;
+    height: -webkit-fill-available;
+    border: 2px solid white;
+}
+.room-back-button {
+    padding: 5px 10px;
+    border: 2px solid #1da69800;
+    color: #1da699;
+    cursor: pointer;
+    transition: 0.14s ease;
+    margin-left: -60px;
+}
+.room-back-button:hover {
+    color: #28bbac;
+}
+
+.back-link {
+    display: flex;
+    height: 50px;
+}
+.addText {
+    display: inline-block; /* inline-block so we can set a width */
+    width: 0;
+    white-space: nowrap; /* keep text one line */
+    direction: rtl; /* change direction so the text overflow on the left */
+    color: rgba(255, 255, 255, 0);
+    transition: 0.22s ease;
+    padding: 12px 45px 0 0;
+    transform: translateX(10px); /* put the value you want here */
+    pointer-events: none; /* to avoid the hover on the text, remove to see the difference */
+}
+
+.back-link:hover .addText {
+    color: #1da699;
+    transform: translateX(0);
+}
+.room-info-container {
+    background: #ffffff;
+    padding: 50px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 24px 15px rgba(0, 0, 0, 0.04);
+}
+.room-info-container-price {
+    background: #ffffff;
+    margin: 15px;
+    color: #696666;
+}
+.room-info-container-caption {
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    line-height: 1.1;
+}
+.room-info-container-desc {
+    padding-bottom: 15px;
+    font-size: 28px;
+    color: #696666;
+}
+
+.room-info-main-cont {
+    padding-top: 20px;
+    font-size: 25px;
+    color: #696666;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-button {
+    padding: 18px 10px;
+    background: #1da699;
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    width: 10vw;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.offer-button:hover {
+    background: #28bbac;
+}
+.user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 150px;
+    width: 100%;
+    padding-bottom: 50px;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+}
+
+.user-info-plus-back {
+    display: flex;
+    margin-left: -150px;
+}
+.user-info-container {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 5px 5px 24px 15px rgba(0, 0, 0, 0.04);
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.user-info-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px 25px 50px;
+    font-size: 35px;
+}
+.user-info-profile {
+    margin-top: -60px;
+    color: #1da699 !important;
+}
+.user-info-main-main {
+    margin-top: -30px;
+}
+.user-info-main-desc {
+    padding: 25px 0 0 0;
+    font-size: 26px;
+    color: #696666;
+    width: 70%;
+}
+
+.user-info-sub {
+    font-size: 28px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #696666;
+}
+.user-info-sub-sub {
+    padding: 10px;
+}
+
+.user-filter-pref {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5px;
+    align-items: flex-start;
+}
+
+.user-info-highlight {
+    color: #1da699;
+}
+.user-info-main-cont {
+    display: flex;
+    justify-content: center;
+}
+
+/* Comments */
+.room-comments-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.enter-comments-container {
+    display: flex;
+    margin-top: 2px;
+}
+.comment-input {
+    box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+    border: 2px solid #ffffff;
+    background: #ffffff;
+    padding: 20px 25px;
+    font-size: 18px;
+    font-family: "Josefin Sans", sans-serif;
+    transition: 0.14s ease;
+    width: 100%;
+}
+
+.comment-input:hover {
+    border: 2px solid #1da699;
+}
+
+.comment-input:focus {
+    outline: none;
+}
+
+.comment-button {
+    border: 2px solid #ffffff;
+    background: #ffffff;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 22px;
+    padding: 8px 15px 0 15px;
+}
+
+.comment-button:hover {
+    color: #1da699;
+}
+
+.nocomm {
+    position: absolute;
+    margin-bottom: 20px;
+}
+
+.messages {
+    /* margin-top: 10px; */
+    height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    scroll-behavior: smooth;
+}
+
+div[id^="message-"] {
+    padding: 15px;
+    box-shadow: 5px 5px 24px 15px rgba(0, 0, 0, 0.04);
+    background: #ffffff;
+    margin: 2px 0 2px 0;
+    text-align: left;
+    /* display: grid;
+    grid-template-rows: 0.3fr 1fr;
+    gap: 20px; */
+    position: relative;
+    /* grid-template-areas:
+        "author created"
+        "comment comment"; */
+}
+
+.author-text {
+    color: #1da699;
+    display: flex;
+    align-items: flex-end;
+    font-size: 25px;
+}
+
+.date-posted {
+    display: flex;
+    font-size: 18px;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.comment-text {
+    width: 20vw;
+    margin: 0;
+    padding: 0 10px 0 10px;
+    font-size: 24px;
+    grid-area: comment;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-info-container-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.user-info-posts-heading {
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+.user-info-posts-container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px 0 15px;
+    flex-wrap: wrap;
+    margin-left: -90px;
+}
+.post-delete-button {
+    padding: 2px 30px 6px 30px;
+    margin: 15px;
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+    transition: 0.14s ease;
+    z-index: 55;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.user-delete-button {
+    padding: 4px 15px 8px 15px;
+    margin: 10px;
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+    transition: 0.14s ease;
+    z-index: 55;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.comment-delete-button {
+    padding: 3px 25px 7px 25px;
+    margin: 15px;
+    background: #ffffff;
+    border: 2px solid #eb3c1d;
+    cursor: pointer;
+    box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+    transition: 0.14s ease;
+    z-index: 55;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.post-delete-button:hover,
+.user-delete-button:hover,
+.comment-delete-button:hover {
+    border: 2px solid #eb3c1d;
+    background: #eb3c1d;
+}
+
+.export-btn path {
+    stroke-width: 2;
+    stroke: #eb3c1d;
+}
+
+.export-btn:hover path {
+    stroke-width: 2.6;
+    stroke: #ffffff;
+}
+
+.post-save-button {
+    color: #ebcc1d;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.14s ease;
+    z-index: 55;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+.post-save-button:hover {
+    color: #fcde38;
+    transform: scale(1.2);
+}
+
+.post-save-button2 {
+    color: #eb3c1d;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.14s ease;
+    z-index: 55;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+.post-save-button2:hover {
+    color: #eb3c1d;
+    transform: scale(1.2);
+}
+
+.react-tabs__tab-list {
+    border-bottom: 3px solid #1da699 !important;
+    margin-bottom: 50px !important;
+    padding: 0 0 0 50px !important;
+}
+
+.react-tabs__tab--selected {
+    background: #1da699 !important;
+    border: none !important;
+    border-bottom: none !important;
+    color: #ffffff !important;
+    padding: 8px 15px !important;
+    border-radius: 0px !important;
+}
+.react-tabs__tab {
+    font-size: 28px;
+    padding-top: 10px !important;
+}
+.collapse-comments {
+    box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+    font-family: "Josefin Sans", sans-serif;
+    transition: 0.14s ease;
+    padding: 20px;
+    color: #ffffff;
+    display: none;
+    font-size: 25px;
+    background: #1da699;
+}
+
+.collapse-comments:hover {
+    background: #28bbac;
+}
+
+.collapse-comments + input {
+    display: none; /* hide the checkboxes */
+}
+
+.collapse-comments + input + div {
+    display: none;
+}
+
+.collapse-comments + input:checked + div {
+    display: block;
+}
+.posted-by {
+    color: #1da699;
+}
+.posted-by:hover {
+    color: #28bbac;
+}
+.react-sharing-button__link {
+    border-radius: 0px !important;
+    margin: 10px !important;
+}
+.react-sharing-button__text {
+    display: none !important;
+}
+.edit-input-btn {
+    border: 2px solid #1da699;
+    background: #1da699;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 22px;
+    margin: 30px 1px 0px 1px;
+    width: 250px;
+    padding: 20px 25px;
+    box-shadow: 5px 5px 24px 5px rgba(0, 0, 0, 0.04);
+    font-family: "Josefin Sans", sans-serif;
+    transition: 0.14s ease;
+}
+
+.edit-input-btn:hover {
+    border: 2px solid #28bbac;
+    background: #28bbac;
+}
+.map {
+    /* margin-top: -30px; */
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 1024px) {
+    .room-post-image {
+        border: 0px solid white;
+    }
+    .room-comments-container-resp {
+        display: none;
+    }
+    .room-post-container {
+        display: block;
+    }
+    .messages {
+        margin-top: 5px;
+    }
+    .comment-text {
+        width: 65vw;
+        font-size: 20px;
+    }
+    .author-text {
+        font-size: 20px;
+    }
+    .date-posted {
+        font-size: 16px;
+    }
+    .collapse-comments {
+        display: block;
+    }
+    .offer-button {
+        padding: 15px 10px;
+        width: 20vw;
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .back-link {
+        display: none;
+    }
+    .room-detail-container {
+        width: 90vw;
+    }
+    .room-info-container-desc {
+        font-size: 26px;
+    }
+    .map {
+        width: 90vw !important;
+    }
+    .room-info-container {
+        background: #ffffff;
+        padding: 30px;
+        margin-bottom: 20px;
+        box-shadow: 5px 5px 24px 15px rgb(0 0 0 / 4%);
+    }
+    .room-info-container-caption {
+        padding-bottom: 20px;
+    }
+    .offer-button {
+        padding: 15px 10px;
+        width: 30vw;
+        font-size: 22px;
+    }
+    .roommate-loading {
+        display: none;
+    }
+    .user-info-plus-back {
+        display: flex;
+        margin-left: 0px;
+    }
+    .user-info-posts-container {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .user-info-container {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .room-info-container {
+        padding: 30px 20px 30px 20px;
+    }
+    .room-info-container-caption {
+        font-size: 26px;
+    }
+    .collapse-comments {
+        font-size: 20px;
+    }
+    .room-container {
+        padding-top: 10px;
+    }
+
+    .room-info-container-desc {
+        font-size: 22px;
+    }
+    .room-info-container-price {
+        font-size: 24px;
+    }
+    .room-info-main-cont {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+    .offer-button {
+        padding: 15px 10px;
+        width: 30vw;
+        font-size: 20px;
+    }
+    .back-link {
+        display: none;
+    }
+    .room-detail-container {
+        width: 90vw;
+    }
+    .user-info-posts-container {
+        width: 100%;
+    }
+    .user-info-main {
+        padding: 0px 20px 25px 20px;
+        font-size: 30px;
+    }
+    .user-info-main-desc {
+        padding: 25px 0 0 0;
+        font-size: 24px;
+        color: #696666;
+        width: 70%;
+    }
+    .user-info-sub {
+        font-size: 22px;
+    }
+    .user-info-sub-sub {
+        padding: 5px;
+    }
+    .react-tabs__tab-list {
+        padding: 0 0 0 0px !important;
+        font-size: 25px;
+    }
+    .post-card-roommate {
+        width: 350px !important;
+    }
+}

@@ -1,0 +1,116 @@
+.search-links {
+    color: black;
+}
+
+.left-half {
+    background: url(bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: cover;
+    position: absolute;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+}
+
+.right-half {
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight {
+    color: #1da699;
+}
+.heading {
+    font-size: 55px;
+    padding: 30px;
+}
+.sub-heading {
+    font-size: 30px;
+    padding: 0 60px;
+    color: #696666;
+    line-height: 40px;
+}
+
+.find {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 60px;
+}
+.find-room,
+.find-roommate {
+    width: 15vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    transition: 0.25s ease;
+    margin: 20px;
+    font-size: 28px;
+    text-align: center;
+    box-shadow: 5px 5px 24px 15px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 32px;
+}
+
+.find-room:hover,
+.find-roommate:hover {
+    transform: scale(1.015);
+    box-shadow: 5px 5px 24px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+    .left-half {
+        display: none;
+    }
+    .right-half {
+        width: 100%;
+        height: 80%;
+        padding-bottom: 100px;
+    }
+    .find {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 60px;
+    }
+    .find-room,
+    .find-roommate {
+        width: 35vw;
+        height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .right-half {
+        padding-top: 50px;
+    }
+    .find {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .find-room,
+    .find-roommate {
+        width: 50vw;
+        height: 15vh;
+        margin: 20px;
+    }
+    .sub-heading {
+        font-size: 25px;
+        padding: 0 40px;
+        color: #696666;
+        line-height: 40px;
+    }
+}
